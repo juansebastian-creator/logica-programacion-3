@@ -1,11 +1,16 @@
-const prompt = require ('prompt-sync')();
-let n = Number(prompt("Digita el numero que quieres validar: "))
 function factorial(n) {
-  let resultado = 1;
-  for (let i = 1; i <= n; i++) {
-    resultado *= i;
-  }
-  return resultado;
+    let resultado = 1;
+    for (let i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+    return resultado;
 }
 
-console.log(factorial(n)); 
+function calcular() {
+    let n = document.getElementById("numero").value;
+    n = Number(n);
+
+    let r = factorial(n);
+
+    document.getElementById("resultado").textContent = r;
+}
